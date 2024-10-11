@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>update</title>
+</head>
+<body>
+  <div class="container">
+    <h1>update member</h1>
+    <form action="{% url 'uprec' data.id %}" method="post">
+      {% csrf_token %}
+      <label for="">First name</label><br>
+      <input type="text " name="first" value="{{data.first_name}}" id=""><br><br>
+      <label for="">last name</label><br>
+      <input type="text " name="last" value="{{data.last_name}}" id=""><br><br>
+      <label for="">country</label><br> 
+      <input type="text " name="country" value="{{data.country}}" id=""><br><br>
+      <input type="submit" name="" id="">
+    </form>
+  </div>
+  
+</body>
+</html>

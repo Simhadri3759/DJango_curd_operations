@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>add data</title>
+</head>
+<body>
+  <center>
+    <div class="containeer">
+      <h1>add member</h1>
+      <form action="{% url 'addrec' %}" method="post">
+        {% csrf_token  %}
+        <label for="">First Name</label>
+        <input type="text" name="first" id=""><br><br>
+        <label for="">Last Name</label>
+        <input type="text" name="last" id=""><br><br>
+        <label for="">country  </label>
+        <input type="text" name="country" id=""><br><br>
+        <input type="submit" value="add">
+      </form>
+        
+  </center>
+
+  </div>
+
+  
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>index</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  
+</head>
+<body>
+  <div class="container">
+    <center><h1>members</h1>
+      <table border="3">
+        {% for x in data %}
+        <tr>
+          <th>{{x.first_name}}</th>
+          <th>{{x.last_name}}</th>
+          <th>{{x.country}}</th>
+          <th><a href="update/{{x.id}}"><button class="up">upadate</button></a></th>
+          <th><a href="delete/{{x.id}}"><button class="del">delete</button></a></th>
+        </tr>
+        {% endfor %}
+      </table>
+      <div>
+        <a href="{% url 'add' %}"><button class="up add">add a member</button></a>
+        
+
+        
+
+      </div>
+    
+    </center>
+  </div>
+   
+  
+</body>
+</html>

@@ -1,0 +1,17 @@
+.up{
+  background-color: green;
+  color: white;
+  cursor: pointer;
+}
+
+.del{
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  
+}
+
+.add{
+  margin-top: 9px;
+  margin-left: 0px ;
+}
